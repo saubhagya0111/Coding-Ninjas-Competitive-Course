@@ -36,7 +36,7 @@ void solution()
     }
     else if (rem != 0)
     {
-        out3(quo, "/", rem);
+        out3(rem, "/", b);
         line;
     }
 }

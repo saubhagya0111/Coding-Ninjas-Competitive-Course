@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 typedef long long ll;
 using namespace std;
-//Triple Hunting 
+//Triple Hunting
 //Link to the problem:- https://orac.amt.edu.au/cgi-bin/train/problem.pl?set=simple3&problemid=414
 int main()
 {
@@ -18,11 +18,19 @@ int main()
             v.push_back(i + 1);
         }
     }
-    cout << c << endl;
-    for (int i = 0; i < v.size(); i++)
+    if (c == 0)
     {
-        cout << v[i] << " ";
+        cout << "Nothing Here\n";
     }
-    cout << endl;
+    else
+    {
+        cout << c << endl;
+        for (int i = 0; i < v.size(); i++)
+        {
+            cout << v[i] << " ";
+        }
+            cout << endl;
+
+    }
     return 0;
 }

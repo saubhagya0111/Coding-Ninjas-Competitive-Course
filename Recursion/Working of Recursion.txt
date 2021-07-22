@@ -1,0 +1,4 @@
+Working of Recursion:-
+1. Works on a similar methodology as of PMI (Principle of mathematical induction)
+2. Base case is proved true for n=1 and then assumed to be true for any number say k subsequently for k+1(using for k)
+3. While solving a problem using Recursion think of the base condition and focus on writing the generalized code for any valid possible input

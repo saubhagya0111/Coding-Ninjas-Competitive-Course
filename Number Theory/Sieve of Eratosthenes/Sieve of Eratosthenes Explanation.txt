@@ -1,0 +1,23 @@
+Sieve of Eratosthenes:-
+1.Since the previous approach of finding the prime numbers between the given numbers was quite inefficient in terms of time complexity
+2. the idea is to maintain an array of type boolean from 0 to the final number input by the user
+3. And initialize the terms to false by default except 0 and 1 indexes of the numbers
+4. The moment a prime number is encountered it can be assured that the successive multiples of the number (till the number n) are non prime
+5. The indexes of the multiples are set to false and prime number's index is changed to true
+6.Each successive Iteration starts from square of the next index (illustrated in the example below)
+Eg. While finding the prime numbers from 0 to 10 using the above methodology the indexes of the multiples of 2 (except 2) i.e 4,6,8,10 will be initialized to false
+    and next index will be 3 first result i.e 6 has already been initialized with false in the array the check should be performed from i*i (here 9) so as to avoid repetition
+    (Reason:- a*b=b*a)
+7. The iteration such be done from 2 to sqrt(N) optimizes the approach
+Explanation:- Any number a is composed of a=sqrt(N)*sqrt(N)=b*c if b>sqrt(N) then c<sqrt(N) and vice versa 
+//Wikipedia's Explanation:- 
+The Sieve of Eratosthenes is a simple way to find all the prime numbers up to some number n:
+Write all the numbers from 2 up to n onto a piece of paper, in order. We will perform the following steps so that all the non-prime numbers will be crossed out, and what's left will be the primes.
+Choose the first, i.e. the smallest available number. Call it p (it will be 2 at the start). If there's no more available numbers, stop.
+Count up from p as 2p, 3p, 4p, ..., up to n in steps of p, and cross out each of those numbers. Some numbers will be already crossed out, that's okay. Do not cross out the number p itself but consider it no longer available.
+Go back to step 2.
+When the algorithm is finished all the numbers that are left not crossed out are all the prime numbers from 2 up to n.
+
+As an optimization we can start the counting in step 3 from p2, and stop in step 2 when p2 is greater than n.
+
+This is allowed because for each number k that is smaller than p, the number kp in step 3 will be already crossed out as part of the algorithm working for some previous prime that is smaller than p – the smallest such prime which divides k evenly.

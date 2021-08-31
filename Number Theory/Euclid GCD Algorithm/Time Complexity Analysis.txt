@@ -1,0 +1,11 @@
+Time complexity of Euclid's GCD algorithm:-
+1.gcd(a,b)=gcd(b,a%b)--->Remainder can range from 0 to b-1 as a>=0
+2. r(a%b)< (a/2)
+3. After two successive recursive call the number is reduced by (a/2)
+a%b=a-[b*(a/b)];
+( explanation is the working of the modulo operator where the floor value of the the division is returned) 
+4. The minimum value of a cannot be lesser than 1 owing to the base condition of the recursive call
+(a/2^k)=1
+(K:The number of recursive calls of the function)
+K=log a
+--------------Time complexity=O(log min(a,b))----------------------------
